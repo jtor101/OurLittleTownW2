@@ -1,0 +1,21 @@
+h1 {
+    background-image: url("/images/planeheadbg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+nav {
+    bottom: 35px;
+    text-decoration: overline;
+}
+
+#article1,
+#article2 {
+    border: 1px solid black;
+}
+
+article img {
+    width: 100%;
+    border-radius: 10px;
+}
