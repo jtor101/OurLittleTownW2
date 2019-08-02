@@ -14,12 +14,11 @@
 </head>
 
 <body class="container-fluid">
-    <h1 class="jumbotron text-right text-light">Page 1</h1>
+    <h1 class="jumbotron text-right text-light">Our Little Hotel</h1>
 
     <nav class="nav justify-content-center bg-info position-relative">
-        <a class="nav-link text-light" href="index.html">Home</a>
-        <a class="nav-link text-light" href="page1.html">Link 1</a>
-        <a class="nav-link text-light" href="page2.html">Link 2</a>
+        <a class="nav-link text-light" href="index.html">Our Little Town</a>
+        <a class="nav-link text-light" href="olthotelform.html">Our Little Hotel</a>
     </nav>
 
     <main class="py-4">
@@ -88,12 +87,13 @@
 
                     <label for="stayLengthField" class="col-form-label">Length of Stay: </label>
                     <div class="col-6 offset-3 form-group">
-                        <input type="number" class="form-control" id="stayLengthField" placeholder="Length of stay? (1-28 days)" min="1" max="28">
+                        <input type="number" class="form-control" id="stayLengthField" value="1" min="1" max="28">
                     </div>
 
                     <label for="typeOfRmSelect" class="col-form-label">Type of Room: </label>
                     <div class="col form-group">
                         <select class="custom-select col-6" id="typeOfRmSelect">
+                            <option></option>
                             <option value="queen">Queen</option>
                             <option value="king">King</option>
                             <option value="kingSuite">King Suite</option>
@@ -108,6 +108,7 @@
                     </div>
 
                     <button type="button" class="btn btn-primary mt-5 px-5 py-4" id="calcBtn">Calculate</button>
+                    <input type="reset" class="btn btn-warning mt-5 px-5 py-4">
 
 
                     <legend class="mt-5">Hotel Reservation Costs: </legend>
@@ -126,14 +127,14 @@
                         <input type="text" class="form-control" id="totalRoomCostOutput">
                     </div>
 
-                    <label for="discOutput" class="col-form-label">Discount (if applicable): </label>
-                    <div class="col-6 offset-3 form-group">
-                        <input type="text" class="form-control" id="discOutput">
-                    </div>
-
                     <label for="taxOutput" class="col-form-label">Taxes: </label>
                     <div class="col-6 offset-3 form-group">
                         <input type="text" class="form-control" id="taxOutput">
+                    </div>
+
+                    <label for="discOutput" class="col-form-label">Discount (if applicable): </label>
+                    <div class="col-6 offset-3 form-group">
+                        <input type="text" class="form-control" id="discOutput">
                     </div>
 
                     <label for="totalOutput" class="col-form-label font-weight-bold">Total Cost of Stay: </label>
@@ -141,6 +142,8 @@
                         <input type="text" class="form-control" id="totalOutput">
                     </div>
 
+                    <button type="button" class="btn btn-primary mt-5 px-5 py-4" id="priceArrayBtn">Show Costs</button>
+                    <p id="costs"></p>
                 </div>
             </div>
 
@@ -155,6 +158,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="scripts/oltscript.js"></script>
 </body>
 
 </html>
