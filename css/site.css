@@ -1,3 +1,5 @@
+/* Heading background image */
+
 h1 {
     background-image: url("/images/planeheadbg.jpg");
     background-repeat: no-repeat;
@@ -5,15 +7,24 @@ h1 {
     background-position: center center;
 }
 
+
+/* Navigation position */
+
 nav {
     bottom: 35px;
     text-decoration: overline;
 }
 
+
+/* Border around main content */
+
 #article1,
 #article2 {
     border: 1px solid black;
 }
+
+
+/* Modifies image in article */
 
 article img {
     width: 100%;

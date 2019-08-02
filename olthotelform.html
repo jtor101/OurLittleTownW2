@@ -10,12 +10,17 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/site.css">
 
-    <title>Hello, world!</title>
+    <title>Our Little Hotel</title>
 </head>
 
 <body class="container-fluid">
+
+
+    <!-- Heading -->
     <h1 class="jumbotron text-right text-light">Our Little Hotel</h1>
 
+
+    <!-- Nav -->
     <nav class="nav justify-content-center bg-info position-relative">
         <a class="nav-link text-light" href="index.html">Our Little Town</a>
         <a class="nav-link text-light" href="olthotelform.html">Our Little Hotel</a>
@@ -25,12 +30,16 @@
 
         <h2 class="text-center mb-5">Plan Your Stay!</h2>
 
+
+        <!-- Begin Form -->
         <form>
 
             <div class="form-row text-center">
                 <div class="col-6 offset-3">
                     <legend>Customer Information</legend>
 
+
+                    <!-- # of Adults dropdown -->
                     <label for="adultNumSelect" class="col-form-label">Number of Adults: </label>
                     <div class="col form-group">
                         <select class="custom-select col-10" id="adultNumSelect">
@@ -41,6 +50,8 @@
                           </select>
                     </div>
 
+
+                    <!-- # of Children dropdown -->
                     <label for="childNumSelect" class="col-form-label">Number of Children: </label>
                     <div class="col form-group">
                         <select class="custom-select col-10" id="childNumSelect">
@@ -52,7 +63,10 @@
                           </select>
                     </div>
 
+
+                    <!-- Discount Radio Buttons -->
                     <legend class="mt-5">Customer Discount Information</legend>
+
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="discount" id="discNoneRb" value="discNoneRb" checked>
                         <label class="form-check-label" for="discNoneRb">
@@ -78,6 +92,8 @@
                                     </label>
                     </div>
 
+
+                    <!-- Reservation Information -->
                     <legend class="mt-5">Customer Reservation Information</legend>
 
                     <label for="checkinDateField" class="col-form-label">Check-In Date: </label>
@@ -101,16 +117,21 @@
                           </select>
                     </div>
 
+
+                    <!-- Breakfast Switch -->
                     <legend class="mt-5">Daily Breakfast Buffet?</legend>
                     <div class="custom-control custom-switch">
                         <input type="checkbox" class="custom-control-input" id="breakfastSwitch">
                         <label class="custom-control-label" for="breakfastSwitch">Yes (Adults: $6.96/day. Children: $3.95/day)</label>
                     </div>
 
+
+                    <!-- Buttons -->
                     <button type="button" class="btn btn-primary mt-5 px-5 py-4" id="calcBtn">Calculate</button>
                     <input type="reset" class="btn btn-warning mt-5 px-5 py-4">
 
 
+                    <!-- Output -->
                     <legend class="mt-5">Hotel Reservation Costs: </legend>
                     <label for="checkinDateOutput" class="col-form-label">Check-In Date: </label>
                     <div class="col-6 offset-3 form-group">
@@ -142,8 +163,6 @@
                         <input type="text" class="form-control" id="totalOutput">
                     </div>
 
-                    <button type="button" class="btn btn-primary mt-5 px-5 py-4" id="priceArrayBtn">Show Costs</button>
-                    <p id="costs"></p>
                 </div>
             </div>
 
@@ -151,6 +170,7 @@
 
     </main>
 
+    <!-- Footer -->
     <footer class="mt-3 py-2 text-center bg-info text-white">John Torres - HartCode 2019</footer>
 
     <!-- Optional JavaScript -->
