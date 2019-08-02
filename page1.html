@@ -8,7 +8,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/site.css">
 
     <title>Hello, world!</title>
 </head>
@@ -24,62 +24,122 @@
 
     <main class="py-4">
 
+        <h2 class="text-center mb-5">Plan Your Stay!</h2>
+
         <form>
 
             <div class="form-row text-center">
                 <div class="col-6 offset-3">
-                    <legend>This Is A Form</legend>
+                    <legend>Customer Information</legend>
 
-                    <label for="i1" class="col-form-label">Input 1: </label>
+                    <label for="adultNumSelect" class="col-form-label">Number of Adults: </label>
                     <div class="col form-group">
-                        <input type="text" class="form-control" id="i1" placeholder="Input 1">
+                        <select class="custom-select col-10" id="adultNumSelect">
+                            <option value="1">1 adult</option>
+                            <option value="2">2 adults</option>
+                            <option value="3">3 adults</option>
+                            <option value="4">4 adults</option>
+                          </select>
                     </div>
 
-                    <label for="i2" class="col-form-label">Input 2: </label>
-                    <div class="col">
-                        <input type="text" class="form-control" id="i2" placeholder="Input 2">
-                    </div>
-
-                    <legend class="mt-5">This Is Also A Form</legend>
-
-                    <label for="i3" class="col-form-label">Input 3: </label>
+                    <label for="childNumSelect" class="col-form-label">Number of Children: </label>
                     <div class="col form-group">
-                        <input type="text" class="form-control" id="i3" placeholder="Input 3">
+                        <select class="custom-select col-10" id="childNumSelect">
+                            <option value="0">0 children</option>
+                            <option value="1">1 child</option>
+                            <option value="2">2 children</option>
+                            <option value="3">3 children</option>
+                            <option value="4">4 children</option>
+                          </select>
                     </div>
 
-                    <label for="i4" class="col-form-label">Input 4: </label>
-                    <div class="col">
-                        <input type="text" class="form-control" id="i4" placeholder="Input 4">
-                    </div>
-
-                    <legend class="mt-5">These Are Radio Buttons</legend>
+                    <legend class="mt-5">Customer Discount Information</legend>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                        <label class="form-check-label" for="exampleRadios1">
-                                      Default radio
+                        <input class="form-check-input" type="radio" name="discount" id="discNoneRb" value="discNoneRb" checked>
+                        <label class="form-check-label" for="discNoneRb">
+                                      None
                                     </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                        <label class="form-check-label" for="exampleRadios2">
-                                      Second default radio
+                        <input class="form-check-input" type="radio" name="discount" id="discAaaRb" value="discAaaRb">
+                        <label class="form-check-label" for="discAaaRb">
+                                      AAA Member Discount (10% off room only)
                                     </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
-                        <label class="form-check-label" for="exampleRadios3">
-                                      Disabled radio
+                        <input class="form-check-input" type="radio" name="discount" id="discSeniorRb" value="discSeniorRb">
+                        <label class="form-check-label" for="discSeniorRb">
+                                      Senior Discount (10% off room & breakfast included in rate)
+                                    </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="discount" id="discMilitaryRb" value="discMilitaryRb">
+                        <label class="form-check-label" for="discMilitaryRb">
+                                      Military Discount (20% off room only)
                                     </label>
                     </div>
 
-                    <legend class="mt-5">This Is A Dropdown</legend>
-                    <select class="custom-select col-10">
-                                <option selected>Placeholder for selection</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                              </select>
+                    <legend class="mt-5">Customer Reservation Information</legend>
 
+                    <label for="checkinDateField" class="col-form-label">Check-In Date: </label>
+                    <div class="col-6 offset-3 form-group">
+                        <input type="date" class="form-control" id="checkinDateField">
+                    </div>
+
+                    <label for="stayLengthField" class="col-form-label">Length of Stay: </label>
+                    <div class="col-6 offset-3 form-group">
+                        <input type="number" class="form-control" id="stayLengthField" placeholder="Length of stay? (1-28 days)" min="1" max="28">
+                    </div>
+
+                    <label for="typeOfRmSelect" class="col-form-label">Type of Room: </label>
+                    <div class="col form-group">
+                        <select class="custom-select col-6" id="typeOfRmSelect">
+                            <option value="queen">Queen</option>
+                            <option value="king">King</option>
+                            <option value="kingSuite">King Suite</option>
+                            <option value="twoBrSuite">2 Bedroom Suite</option>
+                          </select>
+                    </div>
+
+                    <legend class="mt-5">Daily Breakfast Buffet?</legend>
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="breakfastSwitch">
+                        <label class="custom-control-label" for="breakfastSwitch">Yes (Adults: $6.96/day. Children: $3.95/day)</label>
+                    </div>
+
+                    <button type="button" class="btn btn-primary mt-5 px-5 py-4" id="calcBtn">Calculate</button>
+
+
+                    <legend class="mt-5">Hotel Reservation Costs: </legend>
+                    <label for="checkinDateOutput" class="col-form-label">Check-In Date: </label>
+                    <div class="col-6 offset-3 form-group">
+                        <input type="text" class="form-control" id="checkinDateOutput">
+                    </div>
+
+                    <label for="checkoutDateOutput" class="col-form-label">Check-Out Date: </label>
+                    <div class="col-6 offset-3 form-group">
+                        <input type="text" class="form-control" id="checkoutDateOutput">
+                    </div>
+
+                    <label for="totalRoomCostOutput" class="col-form-label">Total Room Cost (including breakfast): </label>
+                    <div class="col-6 offset-3 form-group">
+                        <input type="text" class="form-control" id="totalRoomCostOutput">
+                    </div>
+
+                    <label for="discOutput" class="col-form-label">Discount (if applicable): </label>
+                    <div class="col-6 offset-3 form-group">
+                        <input type="text" class="form-control" id="discOutput">
+                    </div>
+
+                    <label for="taxOutput" class="col-form-label">Taxes: </label>
+                    <div class="col-6 offset-3 form-group">
+                        <input type="text" class="form-control" id="taxOutput">
+                    </div>
+
+                    <label for="totalOutput" class="col-form-label font-weight-bold">Total Cost of Stay: </label>
+                    <div class="col-6 offset-3 form-group">
+                        <input type="text" class="form-control" id="totalOutput">
+                    </div>
 
                 </div>
             </div>
