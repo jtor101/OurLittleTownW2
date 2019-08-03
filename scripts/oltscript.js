@@ -54,7 +54,7 @@ function getNumChildren() { // This function acquires the number of children sta
 }
 
 
-function getCheckoutDate() { //This function gets the checkout date based on the information in the Check-In Date date picker and Length of Stay field.
+function getCheckoutDate() { //This function gets the checkout date based on the information in the Check-In Date date picker and Length of Stay field.  It then outputs the Check-In and Check-Out Dates to the Hotel Reservation Costs section.
     let checkinDateField = document.getElementById("checkinDateField");
     let s = checkinDateField.value;
     let checkinDate = new Date();
@@ -102,27 +102,27 @@ function checkRoomCompatibility() { // This function checks the number of occupa
     let numOfChildren = getNumChildren();
     let rmSelect = document.getElementById("typeOfRmSelect");
 
-    if (numOfAdults + numOfChildren > 6) {
+    if (numOfAdults + numOfChildren > 6) { // All are hidden
         rmSelect.options[1].style.display = "none";
         rmSelect.options[2].style.display = "none";
         rmSelect.options[3].style.display = "none";
         rmSelect.options[4].style.display = "none";
-    } else if (numOfAdults + numOfChildren > 5) {
+    } else if (numOfAdults + numOfChildren > 5) { // King, Queen, and King Suite are hidden
         rmSelect.options[1].style.display = "none";
         rmSelect.options[2].style.display = "none";
         rmSelect.options[3].style.display = "none";
         rmSelect.options[4].style.display = "block";
-    } else if (numOfAdults + numOfChildren > 4) {
+    } else if (numOfAdults + numOfChildren > 4) { //King and Queen are hidden
         rmSelect.options[1].style.display = "block";
         rmSelect.options[2].style.display = "none";
         rmSelect.options[3].style.display = "none";
         rmSelect.options[4].style.display = "block";
-    } else if (numOfAdults + numOfChildren > 2) {
+    } else if (numOfAdults + numOfChildren > 2) { //King is hidden
         rmSelect.options[1].style.display = "block";
         rmSelect.options[2].style.display = "none";
         rmSelect.options[3].style.display = "block";
         rmSelect.options[4].style.display = "block";
-    } else {
+    } else { //All are shown.
         rmSelect.options[1].style.display = "block";
         rmSelect.options[2].style.display = "block";
         rmSelect.options[3].style.display = "block";
@@ -152,7 +152,7 @@ function getDiscount() { //This function returns the discount amount based on th
 }
 
 
-function getBreakfastCost() { // This function returns the cost of breakfast based on the number of occupants, the Breakfast switch position and, the Discount radio button selected.
+function getBreakfastCost() { // This function returns the cost of breakfast based on the number of occupants, the Breakfast switch position, and the Discount radio button selected.
     let stayLengthField = document.getElementById("stayLengthField");
     let stayLength = stayLengthField.value;
     let breakfastSwitch = document.getElementById("breakfastSwitch");
@@ -202,9 +202,6 @@ function getTotal() { //This function does final calculations and places the out
 window.onload = function() {
     const totalCostBtn = document.getElementById("calcBtn");
     totalCostBtn.onclick = getTotal;
-
-    const priceArrayBtn = document.getElementById("priceArrayBtn");
-    priceArrayBtn.onclick = showCosts;
 
     document.getElementById("adultNumSelect").onchange = checkRoomCompatibility;
     document.getElementById("childNumSelect").onchange = checkRoomCompatibility;
