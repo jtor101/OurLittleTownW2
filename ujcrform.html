@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/site.css">
+
+    <title>Uncle Jesse's Car Rental</title>
+
+</head>
+
+
+<body class="container-fluid bg-primary">
+
+
+    <!-- Heading -->
+    <h1 class="jumbotron text-right text-white" id="carhead">Uncle Jesse's Car Rental</h1>
+
+
+    <!-- Nav -->
+    <nav class="nav justify-content-center bg-info position-relative">
+            <a class="nav-link text-light" href="index.html">Our Little Town</a>
+            <a class="nav-link text-light" href="olthotelform.html">Our Little Hotel</a>
+            <a class="nav-link text-light" href="ujcrform.html">Uncle Jesse's Car Rental</a>
+    </nav>
+
+    <main class="py-4 bg-info">
+
+        <div class="row">
+            <img class="img-fluid col-8 offset-2" id="carbodyimg" src="images/carbodyimg.jpg" alt="Hotel Image">
+        </div>
+
+        <h2 class="text-center my-5">Rent A Car From The Best (And Only) Place In Town!</h2>
+
+
+        <!-- Begin Form -->
+        <form class="bg-light">
+                <div class="row">
+                        <fieldset class="form-group col-6 offset-3 mb-5">
+                            <legend class="text-center">Reservation Details</legend>
+                            <label for="pickupDateField">Pickup Date: </label>
+                            <input type="date" id="pickupDateField" class="form-control" name="pickupDateField">
+            
+                            <label for="numOfDaysField">Number of Rental Days: </label>
+                            <input type="number" id="numOfDaysField" class="form-control" name="numOfDaysField" min="1">
+                        </fieldset>
+                    </div>
+            
+                    <div class="row">
+                        <fieldset class="form-group col-6 offset-3 mb-5">
+                            <legend class="text-center">Vehicle Type Selection</legend>
+                            <select class="form-control" id="vehicleTypeSelect">
+                                    <option value="eco">Economy - $29.99/day</option>
+                                    <option value="com">Compact - $39.99/day</option>
+                                    <option value="mds">Midsize - $49.99/day</option>
+                                    <option value="lux">Luxury  - $59.99/day</option>
+                                  </select>
+                        </fieldset>
+                    </div>
+            
+                    <div class="row">
+                        <fieldset class="form-group col-8 offset-2">
+                            <legend class="text-center">Options</legend>
+                            <div class="offset-2">
+            
+                                <input type="checkbox" class="form-check-input" id="tollTagCBox" name="tollTag" value="tollTag">
+                                <label class="form-check-label" for="tollTagCBox">Electronic Toll Tag ($3.95/day + tolls)</label><br>
+            
+                                <input type="checkbox" class="form-check-input" id="gpsCBox" name="gps" value="gps">
+                                <label class="form-check-label" for="gpsCBox">GPS ($2.95/day)</label><br>
+            
+                                <input type="checkbox" class="form-check-input" id="roadsideCBox" name="roadside" value="roadside">
+                                <label class="form-check-label" for="roadsideCBox">Roadside Assistance ($2.95/day)</label><br>
+                            </div>
+                        </fieldset>
+                    </div>
+            
+                    <div class="row">
+                        <fieldset class="form-group col-4 offset-4">
+            
+                            <legend class="text-center">Under 25?</legend>
+                            <div class="form-check offset-4">
+                                <input class="form-check-input" type="radio" name="under25Surcharge" id="under25No" checked>
+                                <label class="form-check-label" for="under25No">No</label>
+                            </div>
+                            <div class="form-check offset-4">
+                                <input class="form-check-input" type="radio" name="under25Surcharge" id="under25Yes">
+                                <label class="form-check-label" for="under25Yes">Yes</label>
+                            </div>
+            
+                        </fieldset>
+                    </div>
+            
+                    <div class="row">
+                        <button type="button" class="btn btn-primary form-group col-2 offset-5 my-5 px-5 py-4" id="totalCostBtn">Estimate Total Cost</button>
+                        <input type="reset" class="btn btn-warning form-group col-2 offset-5 mt-2 mb-5  px-5 py-4">
+                    </div>
+            
+                    <fieldset class="form-group col-6 offset-3">
+                        <legend class="text-center">Costs</legend>
+                        
+                        <label for="pickupDateOutput">Pickup Date: </label>
+                        <input type="text" class="form-control-plaintext" name="pickupDateOutput" id="pickupDateOutput"><br>
+
+                        <label for="dropoffDateOutput">Drop Off Date: </label>
+                        <input type="text" class="form-control-plaintext" name="dropoffDateOutput" id="dropoffDateOutput"><br>
+                        
+                        
+                        <label for="carRentalCostField">Car Rental: </label>
+                        <input type="text" class="form-control-plaintext" name="carRentalCostField" id="carRentalCostField"><br>
+            
+                        <label for="carTypeCostField">Car Upgrade Cost (if applicable): </label>
+                        <input type="text" class="form-control-plaintext" name="carTypeCostField" id="carTypeCostField"><br>
+            
+                        <label for="optionsCostField">Options: </label>
+                        <input type="text" class="form-control-plaintext" name="optionsCostField" id="optionsCostField"><br>
+            
+                        <label for="under25SurchargeField">Under 25 Surcharge: </label>
+                        <input type="text" class="form-control-plaintext" name="under25SurchargeField" id="under25SurchargeField"><br><br>
+            
+                        <label for="totalCostField">Total Due: </label>
+                        <input type="text" class="form-control-plaintext" name="totalCostField" id="totalCostField">
+                    </fieldset>
+
+        </form>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-3 py-2 text-center bg-info text-white">John Torres - HartCode 2019</footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="scripts/rentalScript.js"></script>
+</body>
+
+</html>

@@ -18,6 +18,15 @@
     font-size: 4em;
 }
 
+#carhead {
+    background-image: url("/images/carheadbg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    text-shadow: 4px 3px black;
+    font-size: 4em;
+}
+
 
 /* Navigation position */
 
@@ -37,7 +46,8 @@ nav a:hover {
 /* Border around main content */
 
 #article1,
-#article2 {
+#article2,
+#article3 {
     border: 1px solid black;
 }
 
@@ -60,7 +70,8 @@ article img {
 }
 
 #formbodyimg,
-#formbodyimg2 {
+#formbodyimg2,
+#carbodyimg {
     border-radius: 40px;
 }
 
