@@ -1,1 +1,3 @@
-# OurLittleTownW2
+# Our Little Town
+
+Our Little Town is a project assigned during HartCode Academy 2019 that involves designing a tourism website for a small remote town.  In this case, that small remote town is the fictional hamlet of Nowhereston, CT.  The tourism website contains a hotel reservation cost estimator and a car rental cost estimator.  The goal within this project for myself as a developer was to not use any global JavaScript code, and to improve on Bootstrap form design.
