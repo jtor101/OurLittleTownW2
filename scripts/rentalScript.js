@@ -1,12 +1,17 @@
+// Car Rental Cost Estimator
+// by John Torres
+
 "use strict"
 
-function numOfDaysCostCalc() {
+// This script is calculates the estimated cost of renting a car when given the number of days, type of car, any additional options, and if the driver is over 25 or not.  The pickup and dropoff dates will both output as well.
+
+function numOfDaysCostCalc() { // This function gets the base rental cost by multiplying the number of days by the economy price.
     let numOfDaysField = document.getElementById("numOfDaysField");
     let numOfDaysCost = numOfDaysField.value * 29.99;
     return numOfDaysCost;
 }
 
-function vehicleTypeCalc() {
+function vehicleTypeCalc() { // This function gets the vehicle upgrade cost by multiplying the number of days by the cost difference of the selected vehicle.
     let numOfDaysField = document.getElementById("numOfDaysField");
     let vehicleTypeSelect = document.getElementById("vehicleTypeSelect");
     let vehicleTypeCost;
@@ -28,7 +33,7 @@ function vehicleTypeCalc() {
     return vehicleTypeCost;
 }
 
-function optionsCostCalc() {
+function optionsCostCalc() { // This function calculates the cost of additional options based on the boxes checked in the options section.
     let tollTagCBox = document.getElementById("tollTagCBox").checked;
     let gpsCBox = document.getElementById("gpsCBox").checked;
     let roadsideCBox = document.getElementById("roadsideCBox").checked;
@@ -46,7 +51,7 @@ function optionsCostCalc() {
     return optionsCost;
 }
 
-function surchargeCostCalc() {
+function surchargeCostCalc() { // This function determines if a surcharge for a driver under 25 needs to be applied or not.
     let under25NoRB = document.getElementById("under25No");
     let under25YesRB = document.getElementById("under25Yes");
     let under25sc;
@@ -59,7 +64,7 @@ function surchargeCostCalc() {
     return under25sc;
 }
 
-function getCheckoutDate() {     
+function getCheckoutDate() { // This function takes the pickup date input, determines what the dropoff date will be, and outputs both.  
     let pickupDateField = document.getElementById("pickupDateField");
 
     let s = pickupDateField.value;
@@ -82,7 +87,7 @@ function getCheckoutDate() {
     document.getElementById("dropoffDateOutput").value = temp.toLocaleDateString();
 }
 
-function totalPriceCalc() {
+function totalPriceCalc() { // This function calculates the total price, and outputs all the final calculations.
     let numOfDaysFinal = numOfDaysCostCalc();
     let optionsFinal = optionsCostCalc();
     let surchargeAmt = surchargeCostCalc();
@@ -107,26 +112,3 @@ window.onload = function() {
     const totalCostBtn = document.getElementById("totalCostBtn");
     totalCostBtn.onclick = totalPriceCalc;
 }
-
-/*HTML IDs:
-Pickup Date: id=pickupDateField
-Number Of Days: id=numOfDaysField
-
-Checkboxes:
-Toll Tag: id=tollTagCBox
-GPS: id=gpsCBox
-Roadside: id=roadsideCBox
-
-Radios:
-No: id=under25No
-Yes: id=under25Yes
-
-Button:
-id=totalCostBtn
-
-Output:
-Car Rental: id=carRentalCostField
-Options: id=optionsCostField
-Under 25: id=under25SurchargeField
-
-Total Cost: id=totalCostField*/
