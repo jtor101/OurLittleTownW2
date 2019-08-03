@@ -39,12 +39,12 @@
         <form class="bg-light">
 
             <div class="form-row text-center">
-                <div class="col-8 offset-2">
+                <fieldset class="col-8 offset-2">
                     <legend>Customer Information</legend>
 
 
                     <!-- # of Adults dropdown -->
-                    <label for="adultNumSelect" class="col-form-label" name="adultNumSelect">Number of Adults: </label>
+                    <label for="adultNumSelect" class="col-form-label">Number of Adults: </label>
                     <div class="col form-group">
                         <select class="custom-select col-10" id="adultNumSelect" name="adultNameSelect">
                             <option value="1">1 adult</option>
@@ -69,7 +69,7 @@
 
 
                     <!-- Discount Radio Buttons -->
-                    <legend class="mt-5">Customer Discount Information</legend>
+                    <h3 class="mt-5">Customer Discount Information</h3>
 
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="discount" id="discNoneRb" value="discNoneRb" checked>
@@ -98,7 +98,7 @@
 
 
                     <!-- Reservation Information -->
-                    <legend class="mt-5">Customer Reservation Information</legend>
+                    <h3 class="mt-5">Customer Reservation Information</h3>
 
                     <label for="checkinDateField" class="col-form-label">Check-In Date: </label>
                     <div class="col-6 offset-3 form-group">
@@ -113,7 +113,7 @@
                     <label for="typeOfRmSelect" class="col-form-label">Type of Room: </label>
                     <div class="col form-group">
                         <select class="custom-select col-6" id="typeOfRmSelect" name="typeOfRmSelect">
-                            <option></option>
+                            <option>#</option>
                             <option value="queen">Queen ($150/night)</option>
                             <option value="king">King ($150/night)</option>
                             <option value="kingSuite">King Suite ($190/night)</option>
@@ -123,7 +123,7 @@
 
 
                     <!-- Breakfast Switch -->
-                    <legend class="mt-5">Daily Breakfast Buffet?</legend>
+                    <h3 class="mt-5">Daily Breakfast Buffet?</h3>
                     <div class="custom-control custom-switch">
                         <input type="checkbox" class="custom-control-input" id="breakfastSwitch" name="breakfastSwitch">
                         <label class="custom-control-label" for="breakfastSwitch">Yes (Adults: $6.96/day. Children: $3.95/day)</label>
@@ -136,7 +136,7 @@
 
 
                     <!-- Output -->
-                    <legend class="mt-5">Hotel Reservation Costs: </legend>
+                    <h3 class="mt-5">Hotel Reservation Costs: </h3>
                     <label for="checkinDateOutput" class="col-form-label">Check-In Date: </label>
                     <div class="col-6 offset-3 form-group">
                         <input type="text" class="form-control-plaintext" id="checkinDateOutput" name="checkinDateOutput" readonly>
@@ -167,7 +167,7 @@
                         <input type="text" class="form-control-plaintext" id="totalOutput" name="totalOutput" readonly>
                     </div>
                     <a class="btn btn-success mb-5 px-5 py-4" href="index.html">Return To Home</a>
-                </div>
+                </fieldset>
             </div>
 
         </form>
