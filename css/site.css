@@ -18,10 +18,6 @@
     font-size: 4em;
 }
 
-h2 {
-    text-shadow: 2px 1px white;
-}
-
 
 /* Navigation position */
 
@@ -66,4 +62,10 @@ article img {
 #formbodyimg,
 #formbodyimg2 {
     border-radius: 40px;
+}
+
+/* Subheading text-shadow */
+
+h2 {
+    text-shadow: 2px 1px white;
 }
