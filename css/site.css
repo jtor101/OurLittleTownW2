@@ -1,10 +1,25 @@
 /* Heading background image */
 
-h1 {
+#indexhead {
     background-image: url("/images/planeheadbg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    text-shadow: 4px 3px black;
+    font-size: 4em;
+}
+
+#formhead {
+    background-image: url("/images/formheadbg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    text-shadow: 4px 3px black;
+    font-size: 4em;
+}
+
+h2 {
+    text-shadow: 2px 1px white;
 }
 
 
@@ -13,6 +28,13 @@ h1 {
 nav {
     bottom: 35px;
     text-decoration: overline;
+}
+
+
+/* Hover Pseudoclass */
+
+nav a:hover {
+    background-color: black;
 }
 
 
@@ -26,7 +48,22 @@ nav {
 
 /* Modifies image in article */
 
+nav {
+    border-radius: 5px;
+}
+
+main,
+article,
+footer {
+    border-radius: 40px;
+}
+
 article img {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 40px;
+}
+
+#formbodyimg,
+#formbodyimg2 {
+    border-radius: 40px;
 }

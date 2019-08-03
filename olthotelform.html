@@ -13,11 +13,11 @@
     <title>Our Little Hotel</title>
 </head>
 
-<body class="container-fluid">
+<body class="container-fluid bg-primary">
 
 
     <!-- Heading -->
-    <h1 class="jumbotron text-right text-light">Our Little Hotel</h1>
+    <h1 class="jumbotron text-right text-info" id="formhead">Our Little Hotel</h1>
 
 
     <!-- Nav -->
@@ -26,23 +26,27 @@
         <a class="nav-link text-light" href="olthotelform.html">Our Little Hotel</a>
     </nav>
 
-    <main class="py-4">
+    <main class="py-4 bg-info">
 
-        <h2 class="text-center mb-5">Plan Your Stay!</h2>
+        <div class="row">
+            <img class="img-fluid col-8 offset-2" id="formbodyimg" src="images/formbodyimg.jpg" alt="Hotel Image">
+        </div>
+
+        <h2 class="text-center my-5">Plan Your Stay!</h2>
 
 
         <!-- Begin Form -->
-        <form>
+        <form class="bg-light">
 
             <div class="form-row text-center">
-                <div class="col-6 offset-3">
+                <div class="col-8 offset-2">
                     <legend>Customer Information</legend>
 
 
                     <!-- # of Adults dropdown -->
-                    <label for="adultNumSelect" class="col-form-label">Number of Adults: </label>
+                    <label for="adultNumSelect" class="col-form-label" name="adultNumSelect">Number of Adults: </label>
                     <div class="col form-group">
-                        <select class="custom-select col-10" id="adultNumSelect">
+                        <select class="custom-select col-10" id="adultNumSelect" name="adultNameSelect">
                             <option value="1">1 adult</option>
                             <option value="2">2 adults</option>
                             <option value="3">3 adults</option>
@@ -54,7 +58,7 @@
                     <!-- # of Children dropdown -->
                     <label for="childNumSelect" class="col-form-label">Number of Children: </label>
                     <div class="col form-group">
-                        <select class="custom-select col-10" id="childNumSelect">
+                        <select class="custom-select col-10" id="childNumSelect" name="childNumSelect">
                             <option value="0">0 children</option>
                             <option value="1">1 child</option>
                             <option value="2">2 children</option>
@@ -98,22 +102,22 @@
 
                     <label for="checkinDateField" class="col-form-label">Check-In Date: </label>
                     <div class="col-6 offset-3 form-group">
-                        <input type="date" class="form-control" id="checkinDateField">
+                        <input type="date" class="form-control" id="checkinDateField" name="checkinDateField">
                     </div>
 
                     <label for="stayLengthField" class="col-form-label">Length of Stay: </label>
                     <div class="col-6 offset-3 form-group">
-                        <input type="number" class="form-control" id="stayLengthField" value="1" min="1" max="28">
+                        <input type="number" class="form-control" id="stayLengthField" name="stayLengthField" value="1" min="1" max="28">
                     </div>
 
                     <label for="typeOfRmSelect" class="col-form-label">Type of Room: </label>
                     <div class="col form-group">
-                        <select class="custom-select col-6" id="typeOfRmSelect">
+                        <select class="custom-select col-6" id="typeOfRmSelect" name="typeOfRmSelect">
                             <option></option>
-                            <option value="queen">Queen</option>
-                            <option value="king">King</option>
-                            <option value="kingSuite">King Suite</option>
-                            <option value="twoBrSuite">2 Bedroom Suite</option>
+                            <option value="queen">Queen ($150/night)</option>
+                            <option value="king">King ($150/night)</option>
+                            <option value="kingSuite">King Suite ($190/night)</option>
+                            <option value="twoBrSuite">2 Bedroom Suite ($210/night)</option>
                           </select>
                     </div>
 
@@ -121,7 +125,7 @@
                     <!-- Breakfast Switch -->
                     <legend class="mt-5">Daily Breakfast Buffet?</legend>
                     <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="breakfastSwitch">
+                        <input type="checkbox" class="custom-control-input" id="breakfastSwitch" name="breakfastSwitch">
                         <label class="custom-control-label" for="breakfastSwitch">Yes (Adults: $6.96/day. Children: $3.95/day)</label>
                     </div>
 
@@ -135,38 +139,42 @@
                     <legend class="mt-5">Hotel Reservation Costs: </legend>
                     <label for="checkinDateOutput" class="col-form-label">Check-In Date: </label>
                     <div class="col-6 offset-3 form-group">
-                        <input type="text" class="form-control" id="checkinDateOutput">
+                        <input type="text" class="form-control-plaintext" id="checkinDateOutput" name="checkinDateOutput" readonly>
                     </div>
 
                     <label for="checkoutDateOutput" class="col-form-label">Check-Out Date: </label>
                     <div class="col-6 offset-3 form-group">
-                        <input type="text" class="form-control" id="checkoutDateOutput">
+                        <input type="text" class="form-control-plaintext" id="checkoutDateOutput" name="checkoutDateOutput" readonly>
                     </div>
 
                     <label for="totalRoomCostOutput" class="col-form-label">Total Room Cost (including breakfast): </label>
                     <div class="col-6 offset-3 form-group">
-                        <input type="text" class="form-control" id="totalRoomCostOutput">
+                        <input type="text" class="form-control-plaintext" id="totalRoomCostOutput" name="totalRoomCostOutput" readonly>
                     </div>
 
                     <label for="taxOutput" class="col-form-label">Taxes: </label>
                     <div class="col-6 offset-3 form-group">
-                        <input type="text" class="form-control" id="taxOutput">
+                        <input type="text" class="form-control-plaintext" id="taxOutput" name="taxOutput" readonly>
                     </div>
 
                     <label for="discOutput" class="col-form-label">Discount (if applicable): </label>
                     <div class="col-6 offset-3 form-group">
-                        <input type="text" class="form-control" id="discOutput">
+                        <input type="text" class="form-control-plaintext" id="discOutput" name="discOutput" readonly>
                     </div>
 
                     <label for="totalOutput" class="col-form-label font-weight-bold">Total Cost of Stay: </label>
-                    <div class="col-6 offset-3 form-group">
-                        <input type="text" class="form-control" id="totalOutput">
+                    <div class="col-6 offset-3 form-group pb-4">
+                        <input type="text" class="form-control-plaintext" id="totalOutput" name="totalOutput" readonly>
                     </div>
-
+                    <a class="btn btn-success mb-5 px-5 py-4" href="index.html">Return To Home</a>
                 </div>
             </div>
 
         </form>
+
+        <div class="row mt-5">
+            <img class="img-fluid col-8 offset-2" id="formbodyimg2" src="images/formbodyimg2.jpg" alt="Hotel Image 2">
+        </div>
 
     </main>
 
@@ -178,7 +186,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="scripts/oltscript.js"></script>
+    <script src="scripts/oltscript.min.js"></script>
 </body>
 
 </html>
